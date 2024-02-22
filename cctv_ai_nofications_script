@@ -1,0 +1,27 @@
+alias: Camera 1 - Snapshot, AI & Notification
+sequence:
+  - service: camera.snapshot
+    metadata: {}
+    data:
+      filename: ./www/snapshots/camera1_snapshot.jpg
+    target:
+      device_id: ***YOUR_CAMERAS_DEVICE_ID***
+  - service: google_generative_ai_conversation.generate_content
+    metadata: {}
+    data:
+      prompt: >
+        Motion has been detected, very briefly describe what you see in this
+        image from my  shed driveway camera number 1. What do you think caused
+        the motion alarm? If a person is present, describe them in detail. Don't
+        describe stationary objects or buildings. Your message needs to be short
+        enough to fit in a phone notification.
+      image_filename: ./www/snapshots/camera1_snapshot.jpg
+    response_variable: generated_content
+  - service: notify.mobile_app_adams_iphone_11_pro
+    metadata: {}
+    data:
+      title: Shed PTZ1 Motion Detected
+      message: "\"{{ generated_content['text'] }}\""
+      data:
+        image: /local/snapshots/camera1_snapshot.jpg
+mode: single
