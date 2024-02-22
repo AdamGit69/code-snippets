@@ -17,7 +17,7 @@ sequence:
         enough to fit in a phone notification.
       image_filename: ./www/snapshots/camera1_snapshot.jpg
     response_variable: generated_content
-  - service: notify.mobile_app_adams_iphone_11_pro
+  - service: notify.mobile_app_...YOUR_PHONE_ID
     metadata: {}
     data:
       title: Shed PTZ1 Motion Detected
