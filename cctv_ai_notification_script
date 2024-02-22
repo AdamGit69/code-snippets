@@ -11,7 +11,7 @@ sequence:
     data:
       prompt: >
         Motion has been detected, very briefly describe what you see in this
-        image from my  shed driveway camera number 1. What do you think caused
+        image from my driveway camera number 1. What do you think caused
         the motion alarm? If a person is present, describe them in detail. Don't
         describe stationary objects or buildings. Your message needs to be short
         enough to fit in a phone notification.
