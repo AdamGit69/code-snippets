@@ -1,0 +1,14 @@
+alias: Camera 1 - Snapshot on motion
+description: ""
+trigger:
+  - type: motion
+    platform: device
+    device_id: ****YOUR_CAMERA_DEVICE_ID_CHANGE_VISUAL_EDITOR_TO_FIND*****
+    entity_id: ****YOUR_CAMERA_FEED_ENTITY_ID_CHANGE_VISUAL_EDITOR_TO_FIND*****
+    domain: binary_sensor
+condition: []
+action:
+  - service: script.camera_1_snapshot_ai_notification
+    metadata: {}
+    data: {}
+mode: single
