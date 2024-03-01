@@ -60,7 +60,7 @@ sequence:
       - service: notify.mobile ***** YOUR PHONE ID ********
         metadata: {}
         data:
-          title: Driveway 1a Motion Detected
+          title: Driveway 1 Motion Detected
           message: "{{generated_content['text'] }}"
           data:
             image: /local/snapshots/driveway1_snapshot2.jpg
