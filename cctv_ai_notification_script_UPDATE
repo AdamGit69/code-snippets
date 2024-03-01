@@ -41,7 +41,7 @@ sequence:
         in the following sequence of images from my driveway camera number 1.
         What do you think caused the motion alarm? If a person or car is
         present, describe them in detail. Do not describe stationary objects or
-        buildings. If you see no obious causes of motion, reply with "Camera has
+        buildings. If you see no obvious causes of motion, reply with "Camera has
         detected motion however no obvious motion observed comparing snapshots".
         Your message needs to be short enough to fit in a phone notification. 
       image_filename:
