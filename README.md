@@ -40,3 +40,29 @@ Phew, I hope that all makes sense! 🙂
 
 Anyway here is the updated YAML for the script part:
 https://github.com/AdamGit69/code-snippets/blob/main/cctv_ai_notification_script_UPDATE
+
+######################### RANDOM THING No.2 #####################################
+
+I recently purchased some cheap Lenovo / Tuya motion detectors to use with HA, ALARMO and a couple automations to turn on the lights, where speed isn't that important. This issue is though, these detectors need to be added to HA with the official Tuya / Smartlife integrations (unless you flash them) and they report a "detected" state the entire time... 
+
+So, I wrote a couple automations to fix this. The first, "motion_detector_reset_state_after_motion" does as it says on the box, 10 seconds after detecting motion, this will reset the sensor state to clear. The second automation simply runs the first Automation when HA first starts up. I have multiple sensors, so this on HA startup resets all my detectors to clear.
+
+To install you must have the motion detectors installed in Tuya, have HACS and enable & install the python script "set_state.py".
+
+1) Install your motion detector into the Tuya integratiom. For ease of this, call them "Motion Sensor 1", "Motion Sensor 2" etc etc.
+
+2) Edit your HA configuration.yaml and add the following line:
+python_script:
+
+3) Create a directory called "python_scripts" under your main HA install directory. ie: /homeassistant/python_scripts. Create a new file called "set_state.py" and copy & paste the contents of: 
+https://github.com/AdamGit69/code-snippets/blob/main/motion_detector_set_state.py  - Save file.
+
+4) Create a new automation called "motion_sensor_1_reset_state_after_motion" and copy & paste the contents of:
+https://github.com/AdamGit69/code-snippets/blob/main/motion_detector_reset_state_after_motion-AUTOMATION
+Edit it to suit, changing the two entity_ids to point to your motion detector.
+
+5) Create another new automation called "motion_detector_reset_all_states_on_startup" and copy & paste the contents of:
+https://github.com/AdamGit69/code-snippets/blob/main/motion_detector_reset_all_states_on_startup-AUTOMATION
+Edit it to suit, changing the entity_ids to point to your automation(s) you created in step 4.
+
+And that's it, your motion detectors should now function as you'd expect..
