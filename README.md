@@ -56,7 +56,7 @@ To install you must have the motion detectors installed in Tuya, have HACS and e
 python_script:
 
 3) Create a directory called "python_scripts" under your main HA install directory. ie: /homeassistant/python_scripts. Create a new file called "set_state.py" and copy & paste the contents of: 
-https://github.com/AdamGit69/code-snippets/blob/main/motion_detector_set_state.py  - Save file.
+https://github.com/AdamGit69/code-snippets/blob/main/motion_detector_set_state.py  - Save file and reboot HA.
 
 4) Create a new automation called "motion_sensor_1_reset_state_after_motion" and copy & paste the contents of:
 https://github.com/AdamGit69/code-snippets/blob/main/motion_detector_reset_state_after_motion-AUTOMATION
