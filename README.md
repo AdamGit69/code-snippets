@@ -52,6 +52,7 @@ To install you must have the motion detectors installed in Tuya, have HACS and e
 1) Install your motion detector into the Tuya integratiom. For ease of this, call them "Motion Sensor 1", "Motion Sensor 2" etc etc.
 
 2) Edit your HA configuration.yaml and add the following line:
+
 python_script:
 
 3) Create a directory called "python_scripts" under your main HA install directory. ie: /homeassistant/python_scripts. Create a new file called "set_state.py" and copy & paste the contents of: 
