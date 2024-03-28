@@ -43,7 +43,7 @@ https://github.com/AdamGit69/code-snippets/blob/main/cctv_ai_notification_script
 
 ######################### RANDOM THING No.2 #####################################
 
-I recently purchased some cheap Lenovo / Tuya motion detectors to use with HA, ALARMO and a couple automations to turn on the lights, where speed isn't that important. This issue is though, these detectors need to be added to HA with the official Tuya / Smartlife integrations (unless you flash them) and they report a "detected" state the entire time... 
+I recently purchased some cheap Lenovo / Tuya motion detectors to use with HA, ALARMO and a couple automations to turn on the lights, where speed isn't that important. This issue is though, these detectors need to be added to HA with the official Tuya / Smartlife addon (unless you flash them) and they report a "detected" state the entire time... 
 
 So, I wrote a couple automations to fix this. The first, "motion_detector_reset_state_after_motion" does as it says on the box, 10 seconds after detecting motion, this will reset the sensor state to clear. The second automation simply runs the first Automation when HA first starts up. I have multiple sensors, so this on HA startup resets all my detectors to clear.
 
