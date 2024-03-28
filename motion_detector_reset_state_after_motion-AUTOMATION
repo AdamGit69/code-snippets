@@ -3,7 +3,7 @@ description: ""
 trigger:
   - platform: state
     entity_id:
-      - binary_sensor.motion_sensor_1_study_motion
+      - binary_sensor.motion_sensor_1_motion
     from: "off"
     to: "on"
 condition: []
@@ -16,6 +16,6 @@ action:
     enabled: true
   - service: python_script.set_state
     data:
-      entity_id: binary_sensor.motion_sensor_1_study_motion
+      entity_id: binary_sensor.motion_sensor_1_motion
       state: "off"
 mode: single
