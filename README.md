@@ -49,7 +49,7 @@ So, I wrote a couple automations to fix this. The first, "motion_detector_reset_
 
 To install you must have the motion detectors installed in Tuya, have HACS and enable & install the python script "set_state.py".
 
-1) Install your motion detector into the Tuya integratiom. For ease of this, call them "Motion Sensor 1", "Motion Sensor 2" etc etc.
+1) Install your motion detector into the Tuya integration. For ease of this, call them "Motion Sensor 1", "Motion Sensor 2" etc etc.
 
 2) Edit your HA configuration.yaml and add the following line:
 
