@@ -1,4 +1,4 @@
-alias: Motion Sensor 1 - Reset State After Motion
+alias: Motion Detector 1 - Reset State After Motion
 description: ""
 trigger:
   - platform: state
