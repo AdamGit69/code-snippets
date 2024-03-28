@@ -15,8 +15,4 @@ action:
         - automation.motion_sensor_2_reset_state_after_motion
         - automation.motion_sensor_3_reset_state_after_motion
         - automation.motion_sensor_4_reset_state_after_motion
-        - automation.motion_sensor_5_reset_state_after_motion
-        - automation.motion_sensor_6_reset_state_after_motion
-        - automation.motion_sensor_7_reset_state_after_motion
-        - automation.motion_sensor_8_reset_state_after_motion
 mode: single
