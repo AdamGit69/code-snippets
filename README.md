@@ -59,8 +59,8 @@ python_script:
 https://github.com/AdamGit69/code-snippets/blob/main/motion_detector_set_state.py  - Save file and reboot HA.
 
 4) Create a new automation called "Motion Sensor 1 - Reset State After Motion" and copy & paste the contents of:
-https://github.com/.../motion_detector_reset_state_after...
-Edit it to suit, changing the two entity_ids to point to your motion detector.  You will need to create one of these automations for each one of your detectors.
+https://github.com/AdamGit69/code-snippets/blob/main/motion_detector_reset_state_after_motion-AUTOMATION
+Edit it to suit if you didn't name them "Motion Sensor 1" etc, otherwise change the two entity_ids to point to your motion detector.  You will need to create one of these automations for each one of your detectors.
 
 5) Create another new automation called "Motion Detector Reset All States On Startup" and copy & paste the contents of:
 https://github.com/.../motion_detector_reset_all_states...
