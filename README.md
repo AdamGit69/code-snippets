@@ -62,7 +62,7 @@ https://github.com/AdamGit69/code-snippets/blob/main/motion_detector_set_state.p
 https://github.com/AdamGit69/code-snippets/blob/main/motion_detector_reset_state_after_motion-AUTOMATION
 Edit it to suit if you didn't name your detectors "Motion Sensor 1" etc earlier, otherwise you'll need to change the two entity_ids to point to your motion detector.  You will need to create one of these automations for each one of your detectors.
 
-5) Create another new automation called "Motion Detector Reset All States On Startup" and copy & paste the contents of:
+6) Create another new automation called "Motion Detector Reset All States On Startup" and copy & paste the contents of:
 https://github.com/.../motion_detector_reset_all_states...
 Edit it to suit, changing the entity_ids to point to your automation(s) you created in step 4.
 
