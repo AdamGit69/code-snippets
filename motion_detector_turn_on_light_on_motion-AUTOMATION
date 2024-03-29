@@ -6,7 +6,7 @@ description: ""
 trigger:
   - platform: state
     entity_id:
-      - binary_sensor.motion_sensor_1_motion
+      - ENTITY_ID_OF_THE_MOTION_SENSOR
     to: "on"
 condition:
   - condition: device
