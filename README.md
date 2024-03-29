@@ -58,9 +58,20 @@ python_script:
 3) Create a directory called "python_scripts" under your main HA install directory. ie: /homeassistant/python_scripts. Create a new file called "set_state.py" and copy & paste the contents of: 
 https://github.com/AdamGit69/code-snippets/blob/main/motion_detector_set_state.py  - Save file and reboot HA.
 
-4) Create a new automation called "motion_sensor_1_reset_state_after_motion" and copy & paste the contents of:
-https://github.com/AdamGit69/code-snippets/blob/main/motion_detector_reset_state_after_motion-AUTOMATION
-Edit it to suit, changing the two entity_ids to point to your motion detector. You will need to create one of these automations for each one of your detectors.
+4) Create a new automation called "Motion Sensor 1 - Reset State After Motion" and copy & paste the contents of:
+https://github.com/.../motion_detector_reset_state_after...
+Edit it to suit, changing the two entity_ids to point to your motion detector.  You will need to create one of these automations for each one of your detectors.
+
+5) Create another new automation called "Motion Detector Reset All States On Startup" and copy & paste the contents of:
+https://github.com/.../motion_detector_reset_all_states...
+Edit it to suit, changing the entity_ids to point to your automation(s) you created in step 4.
+
+And that's it, your motion detectors should now function as you'd expect..
+
+More info on the set_state.py python script can be found here:
+https://github.com/xannor/hass_py_set_state
+
+Happy HA'ing 🙂
 
 ##### Bonus: ###########
 Here is the automation I use to turn on my lights when motion is detected by one of these devices. This is NOT that fast but it works good enough for places like my doorway, carport or shed. It can take a couple seconds to turn on once motion is detected, so I wouldn't use it on a staircase for example! lol 
