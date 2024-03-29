@@ -1,0 +1,39 @@
+## AUTOMATION TO TURN ON LIGHTS WHEN MOTION DETECTED AND LEAVE ON WHILE MOTION IS STILL BEING DETECTED. SWITCH OFF WHEN CLEAR FOR 30ish SECONDS
+### COPY & PASTE BELOW INTO A NEW AUTOMATION THEN SWITCH TO VISUAL EDITOR TO HELP FIND ALL YOUR DEVICE AND ENTITY IDS
+
+alias: Motion Sensor 1 - Toggle Light
+description: ""
+trigger:
+  - platform: state
+    entity_id:
+      - binary_sensor.motion_sensor_1_motion
+    to: "on"
+condition:
+  - condition: device
+    type: is_off
+    device_id: DEVICE_ID_OF_THE_LIGHT
+    entity_id: ENTITY_ID_OF_THE_LIGHT
+    domain: light  
+action:
+  - service: light.turn_on
+    metadata: {}
+    data: {}
+    target:
+      device_id: DEVICE_ID_OF_THE_LIGHT
+  - wait_for_trigger:
+      - type: no_motion
+        platform: device
+        device_id: DEVICE_ID_OF_THE_MOTION_SENSOR
+        entity_id: ENTITY_ID_OF_THE_MOTION_SENSOR
+        domain: binary_sensor
+        for:
+          hours: 0
+          minutes: 0
+          seconds: 30
+    continue_on_timeout: true
+  - service: light.turn_off
+    metadata: {}
+    data: {}
+    target:
+      device_id: DEVICE_ID_OF_LIGHT
+mode: single
