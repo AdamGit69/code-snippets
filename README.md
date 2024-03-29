@@ -62,8 +62,8 @@ https://github.com/AdamGit69/code-snippets/blob/main/motion_detector_set_state.p
 https://github.com/AdamGit69/code-snippets/blob/main/motion_detector_reset_state_after_motion-AUTOMATION
 Edit it to suit if you didn't name your detectors "Motion Sensor 1" etc earlier, otherwise you'll need to change the two entity_ids to point to your motion detector.  You will need to create one of these automations for each one of your detectors.
 
-6) Create another new automation called "Motion Detector Reset All States On Startup" and copy & paste the contents of:
-https://github.com/.../motion_detector_reset_all_states...
+5) Create another new automation called "Motion Detector Reset All States On Startup" and copy & paste the contents of:
+https://github.com/AdamGit69/code-snippets/blob/main/motion_detector_reset_all_states_on_startup-AUTOMATION
 Edit it to suit, changing the entity_ids to point to your automation(s) you created in step 4.
 
 And that's it, your motion detectors should now function as you'd expect..
@@ -93,8 +93,3 @@ Finally change the "light turn off" part, to the target device of your light.
 Automation YAML can be found here:
 https://github.com/AdamGit69/code-snippets/blob/main/motion_detector_turn_on_light_on_motion-AUTOMATION
 
-5) Create another new automation called "motion_detector_reset_all_states_on_startup" and copy & paste the contents of:
-https://github.com/AdamGit69/code-snippets/blob/main/motion_detector_reset_all_states_on_startup-AUTOMATION
-Edit it to suit, changing the entity_ids to point to your automation(s) you created in step 4.
-
-And that's it, your motion detectors should now function as you'd expect..
