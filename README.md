@@ -62,6 +62,26 @@ https://github.com/AdamGit69/code-snippets/blob/main/motion_detector_set_state.p
 https://github.com/AdamGit69/code-snippets/blob/main/motion_detector_reset_state_after_motion-AUTOMATION
 Edit it to suit, changing the two entity_ids to point to your motion detector. You will need to create one of these automations for each one of your detectors.
 
+##### Bonus: ###########
+Here is the automation I use to turn on my lights when motion is detected by one of these devices. This is NOT that fast but it works good enough for places like my doorway, carport or shed. It can take a couple seconds to turn on once motion is detected, so I wouldn't use it on a staircase for example! lol 
+
+Anyway, when motion is detected and is sent to HA, this automation checks first that the light is not already turned on (ie with the switch or whatever), then it turns on the light and waits until no motion is detected for 30 seconds and then turns them off again. If the light was already turned on this will not turn it off. It will only turn the light off again if this automation turned it on. The 30 second time along with the 10 seconds in the above automations means if no motion is detected in roughly 40 seconds, the lights will turn off... If you want to make the light go off quicker edit this time but I suggest a minimum of 30 seconds or you could end up with a disco... 🙂
+
+There is a link below to the YAML, I suggest creating a new automation, copy & paste the contents, and then switch to visual editor to find all your device and entity ids. 
+
+You will need to edit (in visual as I said is easier):
+
+The when section: edit to the Entity ID of your motion detector and the "to" should be set to detected
+
+The if section: edit the device id to the light you want to check is off. The condition should be XYZ light is off
+
+The do section: Change the first part, the "light turn on" dropdown thingy, to the target device of your light
+The wait for 1 trigger part, set your motion sensor device id, the trigger should be XZY STOPPED detecting motion. SET THE DURATION TO 30 SECONDS.
+Finally change the "light turn off" part, to the target device of your light.
+
+Automation YAML can be found here:
+https://github.com/AdamGit69/code-snippets/blob/main/motion_detector_turn_on_light_on_motion-AUTOMATION
+
 5) Create another new automation called "motion_detector_reset_all_states_on_startup" and copy & paste the contents of:
 https://github.com/AdamGit69/code-snippets/blob/main/motion_detector_reset_all_states_on_startup-AUTOMATION
 Edit it to suit, changing the entity_ids to point to your automation(s) you created in step 4.
