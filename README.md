@@ -41,6 +41,11 @@ Phew, I hope that all makes sense! 🙂
 Anyway here is the updated YAML for the script part:
 https://github.com/AdamGit69/code-snippets/blob/main/cctv_ai_notification_script_UPDATE
 
+![419374252_786554813318795_8918303800431855253_n](https://github.com/AdamGit69/code-snippets/assets/103038993/76224ff4-fa9f-48ea-94f2-455b11c2992d)
+
+
+![418298922_385943610736011_1569243628285837196_n](https://github.com/AdamGit69/code-snippets/assets/103038993/c85c0e08-2939-40a8-8c03-0126ec7107d0)
+
 ######################### RANDOM THING No.2 #####################################
 
 I recently purchased some cheap Lenovo / Tuya motion detectors to use with HA, ALARMO and a couple automations to turn on the lights, where speed isn't that important. This issue is though, these detectors need to be added to HA with the official Tuya / Smartlife addon (unless you flash them) and they report a "detected" state the entire time... 
