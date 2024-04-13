@@ -87,12 +87,17 @@ There is a link below to the YAML, I suggest creating a new automation, copy & p
 
 You will need to edit (in visual as I said is easier):
 
-The when section: edit to the Entity ID of your motion detector and the "to" should be set to detected
+The when section:
+ Edit to the Entity ID of your motion detector and the "to" should be set to detected
 
-The if section: edit the device id to the light you want to check is off. The condition should be XYZ light is off
+The if section:
+ Edit the device id to the light you want to check is off (which will be the light we turn on with motion below).
+ The condition should be XYZ light is off
 
-The do section: Change the first part, the "light turn on" dropdown thingy, to the target device of your light
-The wait for 1 trigger part, set your motion sensor device id, the trigger should be XZY STOPPED detecting motion. SET THE DURATION TO 30 SECONDS.
+The do section:
+Change the first part, the "light turn on" dropdown thingy, to the target device of your light you want motion to turn on.
+The wait for 1 trigger part, set your motion sensor device id, the trigger should be XZY STOPPED detecting motion.
+SET THE DURATION TO 30 SECONDS.
 Finally change the "light turn off" part, to the target device of your light.
 
 Automation YAML can be found here:
