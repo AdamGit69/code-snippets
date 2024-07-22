@@ -1,4 +1,4 @@
-# Create a scipt with the below, editing the media player to the one you want to play the stream. 
+# Create a new script with the below, editing the media player to the one you want to play the stream. 
 # Then create button on your dashboard to call service and run the script. 
 # Stream info can be found here: https://www.radio-browser.info/ :)
 
