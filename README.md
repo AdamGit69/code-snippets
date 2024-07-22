@@ -115,3 +115,28 @@ Automation YAML can be found here:
 
 https://github.com/AdamGit69/code-snippets/blob/main/motion_detector_turn_on_light_on_motion-AUTOMATION
 
+
+
+######################### RANDOM THING No.3 #####################################
+
+I figured I'd share here just in case anyone wants to be able to play live radio streams through HA and then also have a button on their dashboard to play said streams...
+
+Anyways, for those that don't use it, the easiest way to play radio streams from anywhere in the world through HA is with HA's radio browser:
+https://www.home-assistant.io/integrations/radio_browser
+
+Install the above >> click on media in HA's left hand menu >> click radio browser >> click on the Aussie Flag >> And there is literally a list of hundreds of Aussie radio streams to choose from to stream to your Google hubs / speakers or whatever... 🙂
+
+PART 2: Create a script and button to run a stream from your dashboard:
+
+Copy and paste the code from the link to my GitHub below into a new script in HA, change the media player to suit, and run it. Triple M Radio should play.
+Create a new button on your dashboard to call a service and run the script. Add a image to button like I have if you want that... Job done. 🙂
+
+You will need one script and button for each stream you want on your dashboard but like in the image, I just made up my favorites to run from my media dashboard and others if I ever play em I go through the browser.
+
+I hope that all made sense and some find the script below and this post of some use..
+
+Script can be found on my GitHub here: https://github.com/AdamGit69/code-snippets/blob/main/play_radio_stream_SCRIPT
+
+Information to add other streams can be found here:
+https://www.radio-browser.info/
+
