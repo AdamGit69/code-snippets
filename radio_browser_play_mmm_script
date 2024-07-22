@@ -1,0 +1,19 @@
+# Create a scipt with the below, editing the media player to the one you want to play the stream. Then create button on your dashboard to call service and run the script. :)
+
+alias: "Radio - Play Triple MMM "
+sequence:
+  - service: media_player.play_media
+    data:
+      media_content_type: audio/aac
+      media_content_id: http://legacy.scahw.com.au/2mmm_32
+      extra:
+        metadata:
+          metadataType: 3
+          title: Triple M Melbourne
+          artist: LIVE STREAM
+          images:
+            - url: >-
+                https://images.ctfassets.net/yxg7lydfj6tc/75f6ebae-ad7f-4935-8219-0cb890d0bf74/50e3f1e17371c7eb028659c162b3058b/0004-classicrock.png
+    target:
+      entity_id: media_player.speaker_group_all_house_speakers  # <----- CHANGE TO SUIT WHICH MEDIA PLAYER YOU WANT THE STREAM TO PLAY ON! 
+mode: single
