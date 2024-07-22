@@ -15,7 +15,7 @@ sequence:
           artist: LIVE STREAM
           images:
             - url: >-
-                https://images.ctfassets.net/yxg7lydfj6tc/75f6ebae-ad7f-4935-8219-0cb890d0bf74/50e3f1e17371c7eb028659c162b3058b/0004-classicrock.png
+                https://myradio-img-prod.scalabs.com.au/api/assets/72191957-f81d-40ff-8543-15d8a8b5ca90/
     target:
       entity_id: media_player.speaker_group_all_house_speakers  # <----- CHANGE TO SUIT WHICH MEDIA PLAYER YOU WANT THE STREAM TO PLAY ON! 
 mode: single
