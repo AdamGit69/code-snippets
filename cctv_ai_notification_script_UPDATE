@@ -51,9 +51,7 @@ sequence:
     response_variable: generated_content
   - if:
       - condition: template
-        value_template: >
-          {{ generated_content['text'] == ' Camera has detected motion however
-          no obvious motion observed comparing snapshots.' }} 
+        value_template: "{{ 'No Obvious Motion Detected.' in generated_content.text }}"
     then:
       - stop: ""
     else:
