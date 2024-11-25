@@ -3,7 +3,7 @@ sequence:
   - service: camera.snapshot
     metadata: {}
     data:
-      filename: ./www/snapshots/driveway1_snapshot1.jpg
+      filename: ./media/snapshots/driveway1_snapshot1.jpg
     target:
       device_id: ***YOUR_CAMERAS_DEVICE_ID***
     enabled: true
@@ -16,7 +16,7 @@ sequence:
   - service: camera.snapshot
     metadata: {}
     data:
-      filename: ./www/snapshots/driveway1_snapshot2.jpg
+      filename: ./media/snapshots/driveway1_snapshot2.jpg
     target:
       device_id: ***YOUR_CAMERAS_DEVICE_ID***
     enabled: true
@@ -29,7 +29,7 @@ sequence:
   - service: camera.snapshot
     metadata: {}
     data:
-      filename: ./www/snapshots/driveway1_snapshot3.jpg
+      filename: ./media/snapshots/driveway1_snapshot3.jpg
     target:
       device_id: ***YOUR_CAMERAS_DEVICE_ID***
     enabled: true
@@ -45,9 +45,9 @@ sequence:
         Obvious Motion Detected." Your message needs to be short enough to fit
         in a phone notification. 
       image_filename:
-        - ./www/snapshots/driveway1_snapshot1.jpg
-        - ./www/snapshots/driveway1_snapshot2.jpg
-        - ./www/snapshots/driveway1_snapshot3.jpg
+        - ./media/snapshots/driveway1_snapshot1.jpg
+        - ./media/snapshots/driveway1_snapshot2.jpg
+        - ./media/snapshots/driveway1_snapshot3.jpg
     response_variable: generated_content
   - if:
       - condition: template
@@ -61,5 +61,5 @@ sequence:
           title: Driveway 1 Motion Detected
           message: "{{generated_content['text'] }}"
           data:
-            image: /local/snapshots/driveway1_snapshot2.jpg
+            image: /media/local/snapshots/driveway1_snapshot2.jpg
 mode: single
